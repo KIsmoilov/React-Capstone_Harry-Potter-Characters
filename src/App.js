@@ -1,6 +1,7 @@
 import React from 'react';
 
 // pages
+import Navbar from './components/Navbar';
 
 // Stylesheet
 import './App.css';
@@ -8,6 +9,7 @@ import './App.css';
 function App() {
   return (
     <>
+      <Navbar />
     </>
   );
 }
