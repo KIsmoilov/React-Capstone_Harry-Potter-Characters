@@ -62,7 +62,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **The users are able to make different calculations**
+- **The users are able to see the list of HP characters**
+- **The users are able to search HP characters**
+- **The users are able to read more details about particular HP characters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,10 +206,6 @@ The following useful resources were used to complete this project.
    npm install
    ```
 
-
-- **Which index.html file should I open to make some changes in src folder or dist folder?**
-
-  - Please make change only to Html, CSS and JS files in the src directory
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
