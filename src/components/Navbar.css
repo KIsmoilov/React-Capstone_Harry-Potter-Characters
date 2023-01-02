@@ -1,0 +1,47 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 4rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: rgb(186, 72, 110);
+}
+
+.menuNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.homeIcon {
+  color: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+
+.gearIcon {
+  color: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    padding: 0 1.5rem;
+  }
+
+  .homeIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .gearIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
