@@ -34,5 +34,5 @@ export const fetchCharacters = createAsyncThunk(FETCH_CHARACTERS, async () => {
     characters.push(pick(object, selectedData));
   });
   characters = addId(characters);
-  return characters;
+  return characters.slice(0, 25);
 });
