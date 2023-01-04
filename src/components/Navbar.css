@@ -16,18 +16,18 @@
   list-style: none;
 }
 
-.homeIcon {
+.homeIcon,
+.gearIcon,
+.micIcon {
   color: white;
   width: 1.6rem;
   height: 1.6rem;
   cursor: pointer;
 }
 
-.gearIcon {
-  color: white;
-  width: 1.6rem;
-  height: 1.6rem;
-  cursor: pointer;
+.micIcon {
+  justify-self: flex-end;
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 768px) {

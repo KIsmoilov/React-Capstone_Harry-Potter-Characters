@@ -1,14 +1,40 @@
 .link {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
   text-decoration: none;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+.name {
+  background-color: rgb(217, 68, 122);
+  color: white;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.5rem 0;
+}
+
+.year-of-birth {
+  background-color: rgb(217, 68, 122);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.actor-image-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .actor-img {
-  width: 12rem;
+  width: 13rem;
   height: 16rem;
-}
-
-.rocket-details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
