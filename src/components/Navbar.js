@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGear } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,9 +9,11 @@ import './Navbar.css';
 const Navbar = () => (
   <nav className="navBar">
     <ul className="menuNav">
-      <li>
-        <FontAwesomeIcon className="homeIcon" icon={faHome} />
-      </li>
+      <Link to="/">
+        <li>
+          <FontAwesomeIcon className="homeIcon" icon={faHome} />
+        </li>
+      </Link>
       <li>
         <FontAwesomeIcon className="gearIcon" icon={faGear} />
       </li>

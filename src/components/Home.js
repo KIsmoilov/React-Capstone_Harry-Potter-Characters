@@ -1,27 +1,30 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // Stylesheet
+import './Home.css';
 
 const CharactersInfo = ({ character }) => {
   const {
     name, image, yearOfBirth,
   } = character;
-
   return (
     <>
-      <div className="rocket-details-container">
-        <div className="rocket-image-section">
-          <img src={image} alt={name} />
+      <Link className="link" to={`/Details/${character.id}`} key={character.id}>
+        <div className="actor-image-section">
+          <img className="actor-img" src={image} alt={name} />
         </div>
-        <div className="rocket-detail-section">
-          <h2 className="rocket-name">{name}</h2>
-          <div>
-            <span className="rocket-description">{yearOfBirth}</span>
-          </div>
+        <h2 className="name">{name}</h2>
+        <div>
+          <span className="year-of-birth">
+            Year of birth:
+            {' '}
+            {yearOfBirth}
+          </span>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

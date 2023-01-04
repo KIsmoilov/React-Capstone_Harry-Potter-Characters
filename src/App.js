@@ -9,6 +9,7 @@ import { fetchCharacters } from './Redux/CharacterDetails';
 // Stylesheet
 import './App.css';
 import Characters from './pages/HomePage';
+import DetailsInfo from './pages/DetailsPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Characters />} />
+        <Route exact path="/Details/:id" element={<DetailsInfo />} />
       </Routes>
     </>
   );
