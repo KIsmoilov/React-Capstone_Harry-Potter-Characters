@@ -7,6 +7,8 @@ import Details from '../components/Details';
 
 // Stylesheet
 
+import './DetailsPage.css';
+
 const DetailsInfo = () => {
   const details = useSelector((state) => state.Characters);
   const { id } = useParams();

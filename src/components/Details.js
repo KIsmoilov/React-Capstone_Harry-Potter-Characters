@@ -1,6 +1,9 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TiTick } from 'react-icons/ti';
+import { TfiClose } from 'react-icons/tfi';
+import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
 
 // Stylesheet
 
@@ -16,62 +19,64 @@ const Details = ({ character }) => {
   return (
     <>
       <div className="details-container">
-        <h2 className="charc-name">{name}</h2>
-        <div className="actor-image">
-          <img src={image} alt={name} />
-        </div>
-        <div className="detail-section">
-          <div className="info">
-            <ul className="all-details">
-              <li className="list">
-                <span>Year of Birth</span>
-                <span className="year-of-birth">{yearOfBirth}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Date of Birth</span>
-                <span className="info-detail">{dateOfBirth}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Actor</span>
-                <span className="info-detail">{actor}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Gender</span>
-                <span className="info-detail">{gender}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Species</span>
-                <span className="info-detail">{species}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">House</span>
-                <span className="info-detail">{house}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Ancestry</span>
-                <span className="info-detail">{ancestry}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Eye colour</span>
-                <span className="info-detail">{eyeColour}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Hair colour</span>
-                <span className="info-detail">{hairColour}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Patronus</span>
-                <span className="info-detail">{patronus}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Hogwarts Student</span>
-                <span className="info-detail">{hogwartsStudent}</span>
-              </li>
-              <li className="list">
-                <span className="info-type">Hogwarts Staff</span>
-                <span className="info-detail">{hogwartsStaff}</span>
-              </li>
-            </ul>
+        <div className="card-container">
+          <h2 className="charc-name">{name}</h2>
+          <div>
+            <img className="actor-image" src={image} alt={name} />
+          </div>
+          <div className="detail-section">
+            <div className="info">
+              <table className="all-details">
+                <tr className="list">
+                  <td className="info-type">Actor</td>
+                  <td className="info-detail">{actor}</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Gender</td>
+                  <td className="info-detail">{(gender === 'male') ? <BsGenderMale className="gender" /> : <BsGenderFemale className="fe-gender" />}</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Species</td>
+                  <td className="info-detail">{species}</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Year of Birth</td>
+                  <td className="info-details">{(yearOfBirth !== null) ? `${yearOfBirth}` : 'xxxx' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Date of Birth</td>
+                  <td className="info-detail">{(dateOfBirth !== '') ? `${dateOfBirth}` : 'xx-xx-xx' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">House</td>
+                  <td style={(house === 'Gryffindor') ? { color: 'rgb(245, 188, 48)', background: 'rgb(127, 8, 9)' } : { color: 'rgb(28, 92, 53)', background: 'rgb(168, 171, 170)' }} className="info-detail">{(house !== '') ? `${house}` : 'none' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Ancestry</td>
+                  <td className="info-detail">{(ancestry !== '') ? `${ancestry}` : 'none' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Eye colour</td>
+                  <td style={{ color: `${eyeColour}` }} className="info-detail">{(eyeColour !== '') ? `${eyeColour}` : 'black' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Hair colour</td>
+                  <td style={{ color: `${hairColour}` }} className="info-detail">{hairColour}</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Patronus</td>
+                  <td className="info-detail">{(patronus !== '') ? `${patronus}` : 'none' }</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Hogwarts Student</td>
+                  <td className="info-detail">{(hogwartsStudent === true) ? <TiTick className="tick" /> : <TfiClose className="close" />}</td>
+                </tr>
+                <tr className="list">
+                  <td className="info-type">Hogwarts Staff</td>
+                  <td className="info-detail">{(hogwartsStaff === true) ? <TiTick className="tick" /> : <TfiClose className="close" />}</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

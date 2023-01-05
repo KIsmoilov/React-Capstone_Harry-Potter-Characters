@@ -4,6 +4,30 @@
   align-items: center;
   height: 100vh;
   padding-top: 7rem;
+  margin: 0 auto 5rem auto;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  width: 25rem;
+  height: 50rem;
+  background-color: rgb(241, 230, 185);
+  border-radius: 0.5rem;
+}
+
+.charc-name {
+  background-color: rgb(52, 38, 37);
+  color: white;
+  width: 24.9rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .info {
@@ -13,22 +37,100 @@
 
 .actor-image {
   padding-bottom: 1rem;
-}
-
-.all-details {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.all-details:last-child {
-  border-bottom: 1px solid black;
+  width: 12rem;
+  height: 17rem;
 }
 
 .list {
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  border-top: 1px solid black;
+  min-height: 2rem;
+  height: auto;
 }
 
-.info-type {
-  width: 3rem;
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 20rem;
+  margin-bottom: 1.5rem;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 10rem;
+  padding-left: 0.5rem;
+  padding-top: 0.3rem;
+}
+
+td:nth-of-type(even) {
+  text-align: center;
+  padding-left: 0;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tick {
+  color: rgb(92, 126, 60);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.close {
+  color: red;
+  width: 1rem;
+  height: 1rem;
+}
+
+.gender,
+.fe-gender {
+  color: rgb(166, 147, 227);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.fe-gender {
+  color: rgb(200, 121, 138);
+}
+
+@media screen and (max-width: 768px) {
+  .details-container {
+    padding-top: 7rem;
+  }
+
+  .card-container {
+    width: 22rem;
+  }
+
+  .charc-name {
+    width: 21.9rem;
+  }
+
+  table {
+    width: 18rem;
+  }
+
+  td {
+    width: 9rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card-container {
+    width: 19rem;
+  }
+
+  .charc-name {
+    width: 18.9rem;
+  }
+
+  table {
+    width: 16rem;
+  }
+
+  td {
+    width: 8rem;
+  }
 }

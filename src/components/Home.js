@@ -10,9 +10,16 @@ const CharactersInfo = ({ character }) => {
   const {
     name, image, yearOfBirth,
   } = character;
+  let url;
+  if (character.id) {
+    url = `/Details/${character.id}`;
+  } else {
+    url = '/';
+  }
+
   return (
     <>
-      <Link className="link" to={`/Details/${character.id}`} key={character.id}>
+      <Link className="link" to={url} key={character.id}>
         <h2 className="name">{name}</h2>
         <div className="actor-image-section">
           <img className="actor-img" src={image} alt={name} />
@@ -20,7 +27,7 @@ const CharactersInfo = ({ character }) => {
         <span className="year-of-birth">
           Year of birth:
           {' '}
-          {yearOfBirth}
+          {(yearOfBirth !== null) ? `${yearOfBirth}` : 'xxxx' }
         </span>
       </Link>
     </>

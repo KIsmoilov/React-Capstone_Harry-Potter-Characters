@@ -1,3 +1,8 @@
+.home-contain {
+  min-height: 100vh;
+  height: auto;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -44,14 +49,35 @@ h1 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1024px) {
+  .characters-main-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .characters-main-section {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
   .input {
     left: 0;
     right: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 1rem 0 0rem 0;
+  }
+
+  .home-contain {
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .inputField {
+    width: 10rem;
+    height: 2rem;
   }
 }

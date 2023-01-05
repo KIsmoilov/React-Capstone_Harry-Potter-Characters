@@ -45,3 +45,13 @@
     height: 1.4rem;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .navBar {
+    padding: 0 0.5rem;
+  }
+
+  .micIcon {
+    margin-right: 0.5rem;
+  }
+}
