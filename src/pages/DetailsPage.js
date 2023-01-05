@@ -7,19 +7,19 @@ import Details from '../components/Details';
 
 // Stylesheet
 
+import './DetailsPage.css';
+
 const DetailsInfo = () => {
   const details = useSelector((state) => state.Characters);
   const { id } = useParams();
   const character = details.find((character) => character.id === id);
   return (
     <>
-      <div className="container">
-        <div className="details-main-section">
-          <Details
-            key={character.id}
-            character={character}
-          />
-        </div>
+      <div className="details-main-section">
+        <Details
+          key={character.id}
+          character={character}
+        />
       </div>
     </>
   );
