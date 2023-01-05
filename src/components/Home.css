@@ -13,7 +13,7 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 800;
   padding: 0.5rem 0;
 }
@@ -35,6 +35,6 @@
 }
 
 .actor-img {
-  width: 13rem;
-  height: 16rem;
+  width: 14rem;
+  height: 17rem;
 }

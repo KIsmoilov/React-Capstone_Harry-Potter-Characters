@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 // pages
 import Navbar from './components/Navbar';
@@ -10,6 +10,7 @@ import { fetchCharacters } from './Redux/CharacterDetails';
 import './App.css';
 import Characters from './pages/HomePage';
 import DetailsInfo from './pages/DetailsPage';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/" element={<Characters />} />
         <Route exact path="/Details/:id" element={<DetailsInfo />} />
       </Routes>
+      <Footer />
     </>
   );
 }
