@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import Characters from '../pages/HomePage';
-import store from '../redux/configureStore';
+import store from '../Redux/configureStore';
 
 it('Builds the snapchot of the Home component Details', () => {
   const tree = renderer
