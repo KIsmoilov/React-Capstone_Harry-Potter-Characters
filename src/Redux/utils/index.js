@@ -1,9 +1,12 @@
-/* eslint-disable no-return-assign */
 import nextId from 'react-id-generator';
 
 export default function pick(obj, arr) {
-  // eslint-disable-next-line no-sequences
-  return arr.reduce((acc, record) => (record in obj && (acc[record] = obj[record]), acc), {});
+  const single = arr.reduce((acc, record) => {
+    acc[record] = obj[record];
+    return acc;
+  }, {});
+
+  return single;
 }
 
 export const addId = (array) => {

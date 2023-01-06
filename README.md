@@ -73,7 +73,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 Please use the following link to access the website:
-- [Live Demo Link](#)
+- [Live Demo Link](https://hp-characters-qmdj.onrender.com/)
+- [Video Presentation Link](https://drive.google.com/file/d/1gCY-INTk6I51xUdJSRyfhhWsOQwJEZBs/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

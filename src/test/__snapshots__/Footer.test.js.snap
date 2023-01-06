@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <p>
+    2023 All Rights Reserved. Created by Khusniddin Ismoilov. 
+  </p>
+</footer>
+`;
