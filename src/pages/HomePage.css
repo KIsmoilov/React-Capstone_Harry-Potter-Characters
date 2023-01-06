@@ -1,0 +1,80 @@
+.home-contain {
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  padding: 2rem 0 1rem 0;
+  font-size: 2.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.characters-main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  right: 8rem;
+  top: 1rem;
+}
+
+.inputField {
+  width: 15rem;
+  height: 2.2rem;
+  background-color: white;
+  padding-left: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(186, 72, 110);
+}
+
+.inputField::placeholder {
+  color: rgb(168, 178, 179);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .characters-main-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .characters-main-section {
+    grid-template-columns: 1fr;
+  }
+
+  .input {
+    left: 0;
+    right: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 1rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .inputField {
+    width: 10rem;
+    height: 2rem;
+  }
+}

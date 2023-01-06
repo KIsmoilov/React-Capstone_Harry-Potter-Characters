@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Builds the snapchot of the Home component Details 1`] = `
+<div
+  className="home-contain"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Harry Potter Characters
+    </h1>
+    <div
+      className="input"
+    >
+      <input
+        className="inputField"
+        onChange={[Function]}
+        placeholder="Search by name..."
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="characters-main-section"
+  />
+</div>
+`;

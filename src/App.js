@@ -1,28 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+// pages
+import Navbar from './components/Navbar';
+import { fetchCharacters } from './Redux/CharacterDetails';
+
+// Stylesheet
 import './App.css';
+import Characters from './pages/HomePage';
+import DetailsInfo from './pages/DetailsPage';
+import Footer from './components/Footer';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(fetchCharacters()).unwrap();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Characters />} />
+        <Route exact path="/Details/:id" element={<DetailsInfo />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
