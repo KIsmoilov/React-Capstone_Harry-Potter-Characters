@@ -17,7 +17,6 @@ const DetailsInfo = () => {
     <>
       <div className="details-main-section">
         <Details
-          key={character.id}
           character={character}
         />
       </div>

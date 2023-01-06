@@ -1,6 +1,7 @@
 .home-contain {
   min-height: 100vh;
   height: auto;
+  padding-bottom: 5rem;
 }
 
 .container {
@@ -68,10 +69,6 @@ h1 {
   h1 {
     font-size: 2rem;
     padding: 1rem 0 0 0;
-  }
-
-  .home-contain {
-    padding-bottom: 5rem;
   }
 }
 

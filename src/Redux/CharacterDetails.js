@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Utils
-import pick, { addId } from './utils';
+import pick, { addId } from './utils/index';
 
 // API
 
